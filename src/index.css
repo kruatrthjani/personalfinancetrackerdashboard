@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom hover-border animation */
+.hover-border {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Add underline effect on hover with animation */
+.hover-border::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Slightly below the text */
+  width: 0;
+  height: 2px; /* Border thickness */
+  background-color: white;
+  transition: width 0.5s ease-in-out; /* Transition from left to right */
+}
+
+/* Expand underline on hover with animation */
+.hover-border:hover::after {
+  width: 100%;
+}
