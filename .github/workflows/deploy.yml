@@ -2,7 +2,7 @@ name: 📦 Build & Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]    # ← triggers the workflow on every push to main
+    branches: [ master ]    # ← triggers the workflow on every push to main
 
 jobs:
   build-and-deploy:
